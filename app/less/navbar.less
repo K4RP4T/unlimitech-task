@@ -1,0 +1,31 @@
+.nav-link {
+    color: @black;
+    padding: 0 0.75rem;
+}
+
+.sale {
+    color: @red;
+}
+
+.nav-btn {
+    background-color: @gray;
+
+    &:hover {
+        background-color: darken(@gray, 10%);
+    }
+}
+
+.search-container {
+    &:focus-within {
+        box-shadow: 0 0 0 .25rem @focus-color;
+        transition: box-shadow .15s ease-in-out;
+    }
+}
+
+.search-input {
+    font-size: 0.75rem;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
