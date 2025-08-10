@@ -1,4 +1,4 @@
-footer {
+.footer {
     background-color: @gray;
     color: @black;
     font-size: 0.75rem;
@@ -7,24 +7,24 @@ footer {
     padding-bottom: 2rem;
     padding-left: 3.75rem !important;
 
-    a {
+    &__top {
+        padding-bottom: 2.25rem;
+    }
+
+    &__bottom {
+        padding-top: 2.5rem;
+    }
+
+    &__link {
         color: inherit;
     }
 
-    .icon {
+    &__icon {
         margin-right: 0.5rem;
     }
 }
 
-.footer-top {
-    padding-bottom: 2.25rem;
-}
-
-.footer-bottom {
-    padding-top: 2.5rem;
-}
-
-.company-logo {
+.company {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ footer {
     margin-right: 0.75rem;
     background-color: @white;
 
-    img {
+    &__logo {
         display: block;
         margin: auto;
     }
@@ -42,7 +42,7 @@ footer {
 .social {
     margin-right: 5rem;
 
-    .social-icon {
+    &__icon {
         margin-right: 1.25rem;
     }
 }
