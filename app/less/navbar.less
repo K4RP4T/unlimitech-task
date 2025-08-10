@@ -12,7 +12,12 @@
         background-color: @gray;
 
         &:hover {
-            background-color: darken(@gray, 10%);
+            background-color: darken(@gray, 15%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: darken(@gray, 30%) !important;
         }
     }
 
