@@ -35,20 +35,23 @@
             <div class="d-flex text-center">
                 <div class="flex-fill">
                     <a class="text-decoration-none header__link" href="tel:+48000000000">
-                        <img class="header__img" src="img/phone_white.svg" alt="Zadzwoń" width="16" height="16" draggable="false">
+                        <img class="header__img" src="img/phone_white.svg" alt="Zadzwoń" width="16" height="16"
+                            draggable="false">
                         <span>(+48) 000 000 000</span>
                     </a>
                 </div>
                 <div class="flex-shrink-0">|</div>
                 <div class="flex-fill">
                     <a class="text-decoration-none header__link" href="mailto:sklep@kontakt.com.pl">
-                        <img class="header__img" src="img/write_white.svg" alt="Napisz" width="16" height="16" draggable="false">
+                        <img class="header__img" src="img/write_white.svg" alt="Napisz" width="16" height="16"
+                            draggable="false">
                         <span>Napisz do nas!</span>
                     </a>
                 </div>
                 <div class="flex-shrink-0">|</div>
                 <div class="flex-fill">
-                    <img class="header__img" src="img/shipping.svg" alt="Dostawa" width="16" height="16" draggable="false">
+                    <img class="header__img" src="img/shipping.svg" alt="Dostawa" width="16" height="16"
+                        draggable="false">
                     <span>Darmowa dostawa</span>
                 </div>
                 <div class="flex-shrink-0">|</div>
@@ -63,7 +66,7 @@
     <nav class="p-3 mt-4 navi">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
+                <a href="/" aria-label="Logo Unlimitech" class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
                     <img src="img/logo.svg" alt="Logo Unlimitech" draggable="false">
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -71,30 +74,32 @@
                     <li><a href="#" class="nav-link text-decoration-none navi__link">Bony podarunkowe</a></li>
                     <li><a href="#" class="nav-link text-decoration-none navi__link">Nowości</a></li>
                     <li><a href="#" class="nav-link text-decoration-none navi__link">Bestsellery</a></li>
-                    <li><a href="#" class="nav-link text-decoration-none fw-bold navi__link navi__link--red">Wyprzedaż</a></li>
+                    <li><a href="#"
+                            class="nav-link text-decoration-none fw-bold navi__link navi__link--red">Wyprzedaż</a></li>
                 </ul>
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-1" role="search">
-                    <div class="input-group border rounded-pill search">
-                        <input type="search" name="search" class="form-control border-0 rounded-pill pe-1 search__input"
-                            placeholder="Wyszukaj" aria-label="Wyszukaj">
-                        <button type="button" class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn">
+                    <div class="input-group border rounded-pill navi__search">
+                        <input type="search" name="search"
+                            class="form-control border-0 rounded-pill pe-1 navi__search-input" placeholder="Wyszukaj"
+                            aria-label="Wyszukaj">
+                        <button type="button" aria-label="Szukaj" class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn">
                             <img src="img/search.svg" alt="Szukaj" width="20" height="20" draggable="false">
                         </button>
                     </div>
                 </form>
                 <div class="text-end d-flex">
                     <div class="btn-wrapper border rounded-circle m-1">
-                        <button type="button" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                        <button type="button" aria-label="Konto" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/account.svg" alt="Konto" width="20" height="20" draggable="false">
                         </button>
                     </div>
                     <div class="btn-wrapper border rounded-circle m-1">
-                        <button type="button" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                        <button type="button" aria-label="Ulubione" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/favorite.svg" alt="Ulubione" width="20" height="20" draggable="false">
                         </button>
                     </div>
                     <div class="btn-wrapper border rounded-circle m-1">
-                        <button type="button" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                        <button type="button" aria-label="Koszyk" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/bag.svg" alt="Koszyk" width="20" height="20" draggable="false">
                         </button>
                     </div>
@@ -103,7 +108,44 @@
         </div>
     </nav>
 
-    <footer class="container rounded-4 footer">
+    <section class="container rounded-4 mb-5 newsletter">
+        <div class="d-flex">
+            <img class="newsletter__img" src="img/newsletter.svg" alt="Koperty" draggable="false">
+            <div class="d-flex justify-content-between align-items-center flex-fill">
+                <div class="d-flex flex-column justify-content-center newsletter__content">
+                    <h4 class="fw-bolder mb-1">Chcesz otrzymać 5% zniżki na swoje zakupy?</h4>
+                    <p class="mb-0 newsletter__text">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+                        nowościach,<br>promocjach i ofertach specjalnych!</p>
+                </div>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-1">
+                    <div class="d-flex flex-column">
+                        <div class="input-group border rounded-pill newsletter__email">
+                            <input type="email" name="email" autocomplete="email" required
+                                class="form-control border-0 rounded-pill ps-4 pe-1 newsletter__email-input"
+                                placeholder="Twój adres email" aria-label="Twój adres email"
+                                oninvalid="this.setCustomValidity('Proszę podać prawidłowy adres e-mail.')"
+                                oninput="this.setCustomValidity('')">
+                            <button type="submit" aria-label="Wyślij adres email"
+                                class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 newsletter__email-btn">
+                                <img src="img/send.svg" alt="Wyślij" width="25" height="25" draggable="false">
+                            </button>
+                        </div>
+                        <label class="d-flex align-items-center ps-2 mt-2">
+                            <input type="checkbox" name="acceptation" required class="form-check-input mt-0"
+                                aria-label="Akceptacja regulaminu i polityki prywatności"
+                                oninvalid="this.setCustomValidity('Proszę zaakceptować regulamin i politykę prywatności.')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="ps-2 newsletter__content newsletter__text">Akceptuję <a href="#"
+                                    class="newsletter__link">Regulamin</a>
+                                i <a href="#" class="newsletter__link">Politykę Prywatności</a>.</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container rounded-4 mb-5 footer">
         <div class="row footer__top">
             <div class="col">
                 <h6 class="fw-semibold">O nas</h6>
@@ -198,36 +240,40 @@
             <div class="d-flex flex-column">
                 <h6 class="fw-bold">Dostawa i płatność</h6>
                 <div class="d-flex flex-row">
-                    <div class="border rounded-2 company">
-                        <img class="company__logo" src="img/inpost_kurier.jpg" alt="InPost Kurier" width="50" draggable="false">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/inpost_kurier.jpg" alt="InPost Kurier" width="50"
+                            draggable="false">
                     </div>
-                    <div class="border rounded-2 company">
-                        <img class="company__logo" src="img/inpost_paczkomaty.jpg" alt="InPost Paczkomaty" width="50" draggable="false">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/inpost_paczkomaty.jpg" alt="InPost Paczkomaty"
+                            width="50" draggable="false">
                     </div>
-                    <div class="border rounded-2 company">
-                        <img class="company__logo" src="img/blik.png" alt="Blik" width="50" draggable="false">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/blik.png" alt="Blik" width="50" draggable="false">
                     </div>
-                    <div class="border rounded-2 company">
-                        <img class="company__logo" src="img/przelewy24.png" alt="Przelewy24" width="50" draggable="false">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/przelewy24.png" alt="Przelewy24" width="50"
+                            draggable="false">
                     </div>
-                    <div class="border rounded-2 company">
-                        <img class="company__logo" src="img/paypo.svg" alt="PayPo" width="50" draggable="false">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/paypo.svg" alt="PayPo" width="50" draggable="false">
                     </div>
-                    <div class="border rounded-2 company">
-                        <img class="company__logo" src="img/paypal.png" alt="PayPal" width="50" draggable="false">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/paypal.png" alt="PayPal" width="50"
+                            draggable="false">
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-column social">
+            <div class="d-flex flex-column footer__social">
                 <h6 class="fw-bold">Social media</h6>
                 <div class="d-flex flex-row">
-                    <a href="#" class="social__icon footer__link">
+                    <a href="#" aria-label="Facebook" class="footer__social-icon footer__link">
                         <img src="img/facebook.svg" alt="Facebook" width="24" height="24" draggable="false">
                     </a>
-                    <a href="#" class="social__icon footer__link">
+                    <a href="#" aria-label="Instagram" class="footer__social-icon footer__link">
                         <img src="img/instagram.svg" alt="Instagram" width="24" height="24" draggable="false">
                     </a>
-                    <a href="#" class="social__icon footer__link">
+                    <a href="#" aria-label="TikTok" class="footer__social-icon footer__link">
                         <img src="img/tiktok.svg" alt="TikTok" width="24" height="24" draggable="false">
                     </a>
                 </div>

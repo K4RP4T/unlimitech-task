@@ -15,19 +15,21 @@
             background-color: darken(@gray, 10%);
         }
     }
-}
 
-.search {
-    &:focus-within {
-        box-shadow: 0 0 0 .25rem @focus-color;
-        transition: box-shadow .15s ease-in-out;
-    }
+    &__search {
+        background-color: @white;
 
-    &__input {
-        font-size: 0.75rem;
+        &:focus-within {
+            box-shadow: 0 0 0 .25rem @focus-blue;
+            transition: box-shadow .15s ease-in-out;
+        }
 
-        &:focus {
-            box-shadow: none;
+        &-input {
+            font-size: 0.75rem;
+
+            &:focus {
+                box-shadow: none;
+            }
         }
     }
 }
