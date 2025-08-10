@@ -27,33 +27,33 @@
             transition: box-shadow .15s ease-in-out;
         }
 
-        &:has(&-input:autofill) {
+        &:has(.newsletter__email-input:autofill) {
             background-color: @autofill;
         }
+    }
 
-        &-input {
-            font-size: 1rem;
+    &__email-input {
+        font-size: 1rem;
 
-            &:focus {
-                box-shadow: none;
-            }
-
-            &:autofill {
-                background-color: @white !important;
-            }
+        &:focus {
+            box-shadow: none;
         }
 
-        &-btn {
-            background-color: @black;
+        &:autofill {
+            background-color: @white !important;
+        }
+    }
 
-            &:hover {
-                background-color: lighten(@black, 20%);
-            }
+    &__email-btn {
+        background-color: @black;
 
-            &:active,
-            &:focus {
-                background-color: lighten(@black, 40%) !important;
-            }
+        &:hover {
+            background-color: lighten(@black, 20%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: lighten(@black, 40%) !important;
         }
     }
 }

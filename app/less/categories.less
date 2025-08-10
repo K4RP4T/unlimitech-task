@@ -1,5 +1,5 @@
 .categories {
-    .hover-overlay(@zoom: 1,@xShift: 0%, @yShift: 0%) {
+    .hover-overlay(@zoom: 1, @xShift: 0%, @yShift: 0%) {
         position: relative;
         display: inline-block;
         overflow: hidden;
@@ -12,7 +12,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(50% 50% at 50% 50%, rgba(168, 168, 168, 0.2925) 0%, rgba(45, 45, 45, 0.3575) 100%);
+            background: @radial-gradient;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             z-index: 1;
@@ -49,21 +49,21 @@
 
     &__overlay {
         .hover-overlay(1.05, 0%, 0%);
-    }
 
-    &__overlay--up {
-        .hover-overlay(1.05, 0%, 2%);
-    }
+        &--up {
+            .hover-overlay(1.05, 0%, 2%);
+        }
 
-    &__overlay--up-left {
-        .hover-overlay(1.025, 1%, 1%);
-    }
+        &--up-left {
+            .hover-overlay(1.025, 1%, 1%);
+        }
 
-    &__overlay--down {
-        .hover-overlay(1.05, 0%, -2%);
-    }
+        &--down {
+            .hover-overlay(1.05, 0%, -2%);
+        }
 
-    &__overlay--down-right {
-        .hover-overlay(1.025, -1%, -1%);
+        &--down-right {
+            .hover-overlay(1.025, -1%, -1%);
+        }
     }
 }
