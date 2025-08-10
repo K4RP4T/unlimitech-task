@@ -31,7 +31,7 @@
 
 <body>
     <header class="container-fluid fw-semibold header">
-        <div class="container py-2">
+        <div class="container py-2 header__container">
             <div class="d-flex text-center">
                 <div class="flex-fill">
                     <a class="text-decoration-none header__link" href="tel:+48000000000">
@@ -64,9 +64,10 @@
     </header>
 
     <nav class="p-3 mt-4 navi">
-        <div class="container">
+        <div class="container p-0">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" aria-label="Logo Unlimitech" class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
+                <a href="/" aria-label="Logo Unlimitech"
+                    class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
                     <img src="img/logo.svg" alt="Logo Unlimitech" draggable="false">
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -82,24 +83,28 @@
                         <input type="search" name="search"
                             class="form-control border-0 rounded-pill pe-1 navi__search-input" placeholder="Wyszukaj"
                             aria-label="Wyszukaj">
-                        <button type="button" aria-label="Szukaj" class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn">
+                        <button type="button" aria-label="Szukaj"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn">
                             <img src="img/search.svg" alt="Szukaj" width="20" height="20" draggable="false">
                         </button>
                     </div>
                 </form>
                 <div class="text-end d-flex">
                     <div class="btn-wrapper border rounded-circle m-1">
-                        <button type="button" aria-label="Konto" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                        <button type="button" aria-label="Konto"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/account.svg" alt="Konto" width="20" height="20" draggable="false">
                         </button>
                     </div>
                     <div class="btn-wrapper border rounded-circle m-1">
-                        <button type="button" aria-label="Ulubione" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                        <button type="button" aria-label="Ulubione"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/favorite.svg" alt="Ulubione" width="20" height="20" draggable="false">
                         </button>
                     </div>
                     <div class="btn-wrapper border rounded-circle m-1">
-                        <button type="button" aria-label="Koszyk" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                        <button type="button" aria-label="Koszyk"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/bag.svg" alt="Koszyk" width="20" height="20" draggable="false">
                         </button>
                     </div>
@@ -107,6 +112,51 @@
             </div>
         </div>
     </nav>
+
+    <section class="container rounded-4 mb-5 categories">
+        <div class="row row-cols-4">
+            <div class="col d-flex flex-column px-1">
+                <div class="mb-2 rounded-4 categories__overlay--down">
+                    <img class="img-fluid rounded-4 categories__img" src="img/baleriny.png" alt="Baleriny" draggable="false">
+                    <h2 class="categories__text">Baleriny</h2>
+                </div>
+                <div class="mb-2 rounded-4 categories__overlay">
+                    <img class="img-fluid rounded-4 categories__img" src="img/mokasyny.png" alt="Mokasyny" draggable="false">
+                    <h2 class="categories__text">Mokasyny</h2>
+                </div>
+            </div>
+            <div class="col d-flex flex-column px-1">
+                <div class="mb-2 rounded-4 categories__overlay--up-left">
+                    <img class="img-fluid rounded-4 categories__img" src="img/jazzówki.png" alt="Jazzówki" draggable="false">
+                    <h2 class="categories__text">Jazzówki</h2>
+                </div>
+                <div class="mb-2 rounded-4 categories__overlay--down">
+                    <img class="img-fluid rounded-4 categories__img" src="img/kozaki.png" alt="Kozaki" draggable="false">
+                    <h2 class="categories__text">Kozaki</h2>
+                </div>
+            </div>
+            <div class="col d-flex flex-column px-1">
+                <div class="mb-2 rounded-4 categories__overlay--up">
+                    <img class="img-fluid rounded-4 categories__img" src="img/czółenka.png" alt="Czółenka" draggable="false">
+                    <h2 class="categories__text">Czółenka</h2>
+                </div>
+                <div class="mb-2 rounded-4 categories__overlay--down-right">
+                    <img class="img-fluid rounded-4 categories__img" src="img/sandały.png" alt="Sandały" draggable="false">
+                    <h2 class="categories__text">Sandały</h2>
+                </div>
+            </div>
+            <div class="col d-flex flex-column px-1">
+                <div class="mb-2 rounded-4 categories__overlay">
+                    <img class="img-fluid rounded-4 categories__img" src="img/półbuty.png" alt="Półbuty" draggable="false">
+                    <h2 class="categories__text">Półbuty</h2>
+                </div>
+                <div class="mb-2 rounded-4 categories__overlay--down">
+                    <img class="img-fluid rounded-4 categories__img" src="img/wyprzedaż.png" alt="Wyprzedaż" draggable="false">
+                    <h2 class="categories__text">Wyprzedaż</h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="container rounded-4 mb-5 newsletter">
         <div class="d-flex">
