@@ -34,12 +34,20 @@
     &__item {
 
         &:hover .promotions__img--hover,
+        &:focus .promotions__img--hover,
+        &:focus-within .promotions__img--hover,
         &:hover .promotions__favorite,
-        &:hover .promotions__cart {
+        &:focus .promotions__favorite,
+        &:focus-within .promotions__favorite,
+        &:hover .promotions__cart,
+        &:focus .promotions__cart,
+        &:focus-within .promotions__cart {
             opacity: 1;
         }
 
-        &:hover .promotions__cart {
+        &:hover .promotions__cart,
+        &:focus .promotions__cart,
+        &:focus-within .promotions__cart {
             transform: translateY(-75%);
         }
     }
@@ -157,7 +165,8 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: darken(@blue, 20%);
         }
     }

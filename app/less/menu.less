@@ -1,0 +1,74 @@
+.menu {
+    display: none;
+    z-index: 1000;
+
+    &__item {
+        background-color: @gray;
+
+        &:last-of-type {
+            padding-top: 0.875rem !important;
+            padding-bottom: 0.875rem !important;
+        }
+    }
+
+    &__item-content {
+        padding-left: 2.5rem;
+    }
+
+    &__icon {
+        display: inline-block;
+        background-color: @black;
+        width: 36px;
+        height: 36px;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &--półbuty {
+            mask: url('../img/półbuty_icon.svg') no-repeat center / contain;
+        }
+
+        &--jazzówki {
+            mask: url('../img/jazzówki_icon.svg') no-repeat center / contain;
+        }
+
+        &--czółenka {
+            mask: url('../img/czółenka_icon.svg') no-repeat center / contain;
+        }
+
+        &--baleriny {
+            mask: url('../img/baleriny_icon.svg') no-repeat center / contain;
+        }
+
+        &--sandały {
+            mask: url('../img/sandały_icon.svg') no-repeat center / contain;
+        }
+
+        &--klapki {
+            mask: url('../img/klapki_icon.svg') no-repeat center / contain;
+        }
+
+        &--botki {
+            mask: url('../img/botki_icon.svg') no-repeat center / contain;
+        }
+
+        &--kozaki {
+            mask: url('../img/kozaki_icon.svg') no-repeat center / contain;
+        }
+
+        &--outlet {
+            mask: url('../img/outlet_icon.svg') no-repeat center / contain;
+        }
+    }
+
+    &__text {
+        padding-left: 0.75rem;
+        color: @black;
+
+        &--last {
+            padding-left: 0;
+        }
+    }
+
+    &__submenu {
+        background-color: @gray;
+    }
+}
