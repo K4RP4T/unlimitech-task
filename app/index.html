@@ -12,27 +12,756 @@
     <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
     <link rel="manifest" href="static/site.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        crossorigin="anonymous" />
 
     <link rel="stylesheet/less" type="text/css" href="less/main.less" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
 </head>
 
 <body>
+    <header class="container-fluid fw-semibold header">
+        <div class="container py-2 header__container">
+            <div class="d-flex text-center">
+                <div class="flex-fill">
+                    <a class="text-decoration-none header__link" href="tel:+48000000000">
+                        <img class="header__img" src="img/phone_white.svg" alt="Zadzwoń" width="16" height="16"
+                            draggable="false">
+                        <span>(+48) 000 000 000</span>
+                    </a>
+                </div>
+                <div class="flex-shrink-0">|</div>
+                <div class="flex-fill">
+                    <a class="text-decoration-none header__link" href="mailto:sklep@kontakt.com.pl">
+                        <img class="header__img" src="img/write_white.svg" alt="Napisz" width="16" height="16"
+                            draggable="false">
+                        <span>Napisz do nas!</span>
+                    </a>
+                </div>
+                <div class="flex-shrink-0">|</div>
+                <div class="flex-fill">
+                    <img class="header__img" src="img/shipping.svg" alt="Dostawa" width="16" height="16"
+                        draggable="false">
+                    <span>Darmowa dostawa</span>
+                </div>
+                <div class="flex-shrink-0">|</div>
+                <div class="flex-fill">
+                    <img class="header__img" src="img/restock.svg" alt="Zwrot" width="16" height="16" draggable="false">
+                    <span>30 Dni na darmowy zwrot</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="p-3 my-4 navi">
+        <div class="container p-0">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" aria-label="Logo Unlimitech"
+                    class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
+                    <img src="img/logo.svg" alt="Logo Unlimitech" draggable="false">
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link text-decoration-none navi__link">Damskie buty skórzane</a></li>
+                    <li><a href="#" class="nav-link text-decoration-none navi__link">Bony podarunkowe</a></li>
+                    <li><a href="#" class="nav-link text-decoration-none navi__link">Nowości</a></li>
+                    <li><a href="#" class="nav-link text-decoration-none navi__link">Bestsellery</a></li>
+                    <li><a href="#"
+                            class="nav-link text-decoration-none fw-bold navi__link navi__link--red">Wyprzedaż</a></li>
+                </ul>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-1" role="search">
+                    <div class="input-group border rounded-pill navi__search">
+                        <input type="search" name="search"
+                            class="form-control border-0 rounded-pill pe-1 navi__search-input" placeholder="Wyszukaj"
+                            aria-label="Wyszukaj">
+                        <button type="button" aria-label="Szukaj"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn">
+                            <img src="img/search.svg" alt="Szukaj" width="20" height="20" draggable="false">
+                        </button>
+                    </div>
+                </form>
+                <div class="text-end d-flex">
+                    <div class="border rounded-circle m-1">
+                        <button type="button" aria-label="Konto"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                            <img src="img/account.svg" alt="Konto" width="20" height="20" draggable="false">
+                        </button>
+                    </div>
+                    <div class="border rounded-circle m-1">
+                        <button type="button" aria-label="Ulubione"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                            <img src="img/favorite.svg" alt="Ulubione" width="20" height="20" draggable="false">
+                        </button>
+                    </div>
+                    <div class="border rounded-circle m-1">
+                        <button type="button" aria-label="Koszyk"
+                            class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
+                            <img src="img/bag.svg" alt="Koszyk" width="20" height="20" draggable="false">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container p-0 banner">
+        <div class="rounded-4 banner__slider">
+            <div class="d-flex rounded-4 banner__item">
+                <img src="img/banner_1.png" alt="Nowa kolekcja" class="img-fluid rounded-4 banner__img">
+                <div class="d-flex banner__content">
+                    <div class="flex-fill">
+                        <h1 class="banner__title">Nowa kolekcja</h1>
+                        <p class="fw-medium mb-0 banner__text">Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium<br>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+                    </div>
+                    <div class="d-flex align-items-end">
+                        <a href="#" class="btn d-flex border rounded-2 px-3 py-2 fw-bold banner__btn">Zobacz więcej</a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex rounded-4 banner__item">
+                <img src="img/banner_2.png" alt="Najgorętsze trendy tego sezonu"
+                    class="img-fluid rounded-4 banner__img">
+                <div class="d-flex banner__content">
+                    <div class="flex-fill">
+                        <h1 class="banner__title">Najgorętsze trendy tego sezonu</h1>
+                        <p class="fw-medium mb-0 banner__text">Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium<br>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+                    </div>
+                    <div class="d-flex align-items-end">
+                        <a href="#" class="btn d-flex border rounded-2 px-3 py-2 fw-bold banner__btn">Zobacz więcej</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" aria-label="Poprzedni baner" class="btn d-flex border rounded-circle banner__prev">
+            <img src="img/left.svg" alt="Poprzednie" width="16" height="12" draggable="false">
+        </button>
+        <button type="button" aria-label="Następny baner" class="btn d-flex border rounded-circle banner__next">
+            <img src="img/right.svg" alt="Następne" width="16" height="12" draggable="false">
+        </button>
+        <div class="banner__dots"></div>
+    </section>
+
+    <section class="container rounded-4 mb-5 categories">
+        <div class="row row-cols-4">
+            <div class="col d-flex flex-column px-1">
+                <a href="#" aria-label="Baleriny" class="mb-2 rounded-4 categories__overlay--down">
+                    <img class="img-fluid rounded-4 categories__img" src="img/baleriny.png" alt="Baleriny"
+                        draggable="false">
+                    <h2 class="categories__text">Baleriny</h2>
+                </a>
+                <a href="#" aria-label="Mokasyny" class="mb-2 rounded-4 categories__overlay">
+                    <img class="img-fluid rounded-4 categories__img" src="img/mokasyny.png" alt="Mokasyny"
+                        draggable="false">
+                    <h2 class="categories__text">Mokasyny</h2>
+                </a>
+            </div>
+            <div class="col d-flex flex-column px-1">
+                <a href="#" aria-label="Jazzówki" class="mb-2 rounded-4 categories__overlay--up-left">
+                    <img class="img-fluid rounded-4 categories__img" src="img/jazzówki.png" alt="Jazzówki"
+                        draggable="false">
+                    <h2 class="categories__text">Jazzówki</h2>
+                </a>
+                <a href="#" aria-label="Kozaki" class="mb-2 rounded-4 categories__overlay--down">
+                    <img class="img-fluid rounded-4 categories__img" src="img/kozaki.png" alt="Kozaki"
+                        draggable="false">
+                    <h2 class="categories__text">Kozaki</h2>
+                </a>
+            </div>
+            <div class="col d-flex flex-column px-1">
+                <a href="#" aria-label="Czółenka" class="mb-2 rounded-4 categories__overlay--up">
+                    <img class="img-fluid rounded-4 categories__img" src="img/czółenka.png" alt="Czółenka"
+                        draggable="false">
+                    <h2 class="categories__text">Czółenka</h2>
+                </a>
+                <a href="#" aria-label="Sandały" class="mb-2 rounded-4 categories__overlay--down-right">
+                    <img class="img-fluid rounded-4 categories__img" src="img/sandały.png" alt="Sandały"
+                        draggable="false">
+                    <h2 class="categories__text">Sandały</h2>
+                </a>
+            </div>
+            <div class="col d-flex flex-column px-1">
+                <a href="#" aria-label="Półbuty" class="mb-2 rounded-4 categories__overlay">
+                    <img class="img-fluid rounded-4 categories__img" src="img/półbuty.png" alt="Półbuty"
+                        draggable="false">
+                    <h2 class="categories__text">Półbuty</h2>
+                </a>
+                <a href="#" aria-label="Wyprzedaż" class="mb-2 rounded-4 categories__overlay--down">
+                    <img class="img-fluid rounded-4 categories__img" src="img/wyprzedaż.png" alt="Wyprzedaż"
+                        draggable="false">
+                    <h2 class="categories__text">Wyprzedaż</h2>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container px-0 promotions">
+        <div class="d-flex justify-content-between align-items-center promotions__title">
+            <div class="d-flex align-items-center">
+                <h2 class="mb-0 fw-bolder promotions__main-title">Promocje</h2>
+                <span class="px-3 fw-bold fs-6 promotions__text">|</span>
+                <span class="promotions__text">Nowości</span>
+                <span class="px-3 fw-bold fs-6 promotions__text">|</span>
+                <span class="promotions__text">Bestsellery</span>
+            </div>
+            <a href="#" class="nav-link text-decoration-none promotions__link">Zobacz wszystkie</a>
+        </div>
+        <div class="promotions__container">
+            <div class="rounded-4 promotions__slider">
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+            </div>
+            <button type="button" aria-label="Poprzednie promocje"
+                class="btn d-flex border rounded-circle promotions__prev">
+                <img src="img/left.svg" alt="Poprzednie" width="16" height="12" draggable="false">
+            </button>
+            <button type="button" aria-label="Następne promocje"
+                class="btn d-flex border rounded-circle promotions__next">
+                <img src="img/right.svg" alt="Następne" width="16" height="12" draggable="false">
+            </button>
+            <div class="promotions__dots"></div>
+        </div>
+    </section>
+
+    <section class="container rounded-4 mb-5 newsletter">
+        <div class="d-flex">
+            <img class="newsletter__img" src="img/newsletter.svg" alt="Koperty" draggable="false">
+            <div class="d-flex justify-content-between align-items-center flex-fill">
+                <div class="d-flex flex-column justify-content-center newsletter__content">
+                    <h4 class="fw-bolder mb-1">Chcesz otrzymać 5% zniżki na swoje zakupy?</h4>
+                    <p class="mb-0 newsletter__text">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+                        nowościach,<br>promocjach i ofertach specjalnych!</p>
+                </div>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-1">
+                    <div class="d-flex flex-column">
+                        <div class="input-group border rounded-pill newsletter__email">
+                            <input type="email" name="email" autocomplete="email" required
+                                class="form-control border-0 rounded-pill ps-4 pe-1 newsletter__email-input"
+                                placeholder="Twój adres email" aria-label="Twój adres email"
+                                oninvalid="this.setCustomValidity('Proszę podać prawidłowy adres e-mail.')"
+                                oninput="this.setCustomValidity('')">
+                            <button type="submit" aria-label="Wyślij adres email"
+                                class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 newsletter__email-btn">
+                                <img src="img/send.svg" alt="Wyślij" width="25" height="25" draggable="false">
+                            </button>
+                        </div>
+                        <label class="d-flex align-items-center ps-2 mt-2">
+                            <input type="checkbox" name="acceptation" required class="form-check-input mt-0"
+                                aria-label="Akceptacja regulaminu i polityki prywatności"
+                                oninvalid="this.setCustomValidity('Proszę zaakceptować regulamin i politykę prywatności.')"
+                                oninput="this.setCustomValidity('')">
+                            <span class="ps-2 newsletter__content newsletter__text">Akceptuję <a href="#"
+                                    class="newsletter__link">Regulamin</a>
+                                i <a href="#" class="newsletter__link">Politykę Prywatności</a>.</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container rounded-4 mb-5 footer">
+        <div class="row footer__top">
+            <div class="col">
+                <h6 class="fw-semibold">O nas</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Poznajmy się</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Skontaktuj się z nami</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Dołącz do nas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h6 class="fw-semibold">Informacje</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Regulamin</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Polityka prywatności</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Zasady gwarancji</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h6 class="fw-semibold">Twoje konto</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Twoje konto</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Twoje zamówienia</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Logowanie</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Rejestracja</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h6 class="fw-semibold">Obsługa klienta</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Dostawa i płatność</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Wymiana</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Zwrot</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">Reklamacje</a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="#" class="nav-link p-0 footer__link">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h6 class="fw-semibold">Skontaktuj się z nami</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-1">
+                        <a class="nav-link p-0 footer__link" href="tel:+48000000000">
+                            <img class="footer__icon" src="img/phone_blue.svg" alt="Zadzwoń" width="16" height="16"
+                                draggable="false">
+                            <span class="fw-medium">(+48) 000 000 000</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a class="nav-link p-0 footer__link" href="mailto:sklep@kontakt.com.pl">
+                            <img class="footer__icon" src="img/write_blue.svg" alt="Napisz" width="16" height="16"
+                                draggable="false">
+                            <span class="fw-medium">sklep@kontakt.com.pl</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <p class="p-0 ms-4">Jesteśmy do twojej dyspozycji<br>od poniedziałku do piątku<br>w godzinach
+                            8:00 - 16:00</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between border-top footer__bottom">
+            <div class="d-flex flex-column">
+                <h6 class="fw-bold">Dostawa i płatność</h6>
+                <div class="d-flex flex-row">
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/inpost_kurier.jpg" alt="InPost Kurier" width="50"
+                            draggable="false">
+                    </div>
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/inpost_paczkomaty.jpg" alt="InPost Paczkomaty"
+                            width="50" draggable="false">
+                    </div>
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/blik.png" alt="Blik" width="50" draggable="false">
+                    </div>
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/przelewy24.png" alt="Przelewy24" width="50"
+                            draggable="false">
+                    </div>
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/paypo.svg" alt="PayPo" width="50" draggable="false">
+                    </div>
+                    <div class="border rounded-2 footer__company">
+                        <img class="footer__company-logo" src="img/paypal.png" alt="PayPal" width="50"
+                            draggable="false">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column footer__social">
+                <h6 class="fw-bold">Social media</h6>
+                <div class="d-flex flex-row">
+                    <a href="#" aria-label="Facebook" class="footer__social-icon footer__link">
+                        <img src="img/facebook.svg" alt="Facebook" width="24" height="24" draggable="false">
+                    </a>
+                    <a href="#" aria-label="Instagram" class="footer__social-icon footer__link">
+                        <img src="img/instagram.svg" alt="Instagram" width="24" height="24" draggable="false">
+                    </a>
+                    <a href="#" aria-label="TikTok" class="footer__social-icon footer__link">
+                        <img src="img/tiktok.svg" alt="TikTok" width="24" height="24" draggable="false">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/promotions.js"></script>
 </body>
 
 </html>

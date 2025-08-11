@@ -1,0 +1,79 @@
+.banner {
+    position: relative;
+    margin-bottom: 7rem;
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: @radial-gradient;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        width: calc(100% - 6rem);
+        color: @white;
+    }
+
+    &__title {
+        font-weight: 900;
+    }
+
+    &__text {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        color: @banner-text;
+    }
+
+    &__btn,
+    &__prev,
+    &__next {
+        border-color: @white !important;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(8px);
+
+        &:hover,
+        &:focus {
+            background: @black;
+        }
+    }
+
+    &__btn {
+        font-size: 1rem;
+        color: @white;
+    }
+
+    &__prev {
+        position: absolute;
+        top: 50%;
+        left: 3rem;
+        transform: translateY(-50%);
+        padding: 0.625rem 0.5rem;
+
+    }
+
+    &__next {
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        transform: translateY(-50%);
+        padding: 0.625rem 0.5rem;
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,59 @@
+.newsletter {
+    background-color: @blue;
+
+    &__img {
+        margin-left: 3.75rem;
+    }
+
+    &__content {
+        color: @white;
+    }
+
+    &__text {
+        font-size: 0.75rem;
+    }
+
+    &__link {
+        color: @white;
+    }
+
+    &__email {
+        background-color: @white;
+        width: 21rem;
+        margin-right: 6rem;
+
+        &:focus-within {
+            box-shadow: 0 0 0 .25rem @focus-white;
+            transition: box-shadow .15s ease-in-out;
+        }
+
+        &:has(.newsletter__email-input:autofill) {
+            background-color: @autofill;
+        }
+    }
+
+    &__email-input {
+        font-size: 1rem;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:autofill {
+            background-color: @white !important;
+        }
+    }
+
+    &__email-btn {
+        background-color: @black;
+
+        &:hover {
+            background-color: lighten(@black, 20%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: lighten(@black, 40%) !important;
+        }
+    }
+}

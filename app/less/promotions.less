@@ -1,0 +1,213 @@
+.promotions {
+    &__title {
+        margin-bottom: 3.5rem;
+    }
+
+    &__main-title {
+        color: @blue;
+    }
+
+    &__text {
+        color: @black;
+        font-size: 2rem;
+    }
+
+    &__link {
+        color: @black;
+        font-size: 0.75rem;
+
+        &:hover {
+            color: @blue;
+        }
+    }
+
+    &__container {
+        position: relative;
+        margin-bottom: 8rem;
+    }
+
+    &__content-container {
+        height: 6rem;
+    }
+
+    &__item,
+    &__img-wrapper {
+        position: relative;
+
+        &:hover .promotions__img--hover,
+        &:hover .promotions__favorite,
+        &:hover .promotions__cart {
+            opacity: 1;
+        }
+
+        &:hover .promotions__cart {
+            transform: translateY(-75%);
+        }
+    }
+
+    &__img {
+        transition: opacity 0.3s ease-in-out;
+
+        &--hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+
+    &__item-name {
+        color: @black;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    &__item-description {
+        color: @dark-gray;
+        font-weight: 500;
+        font-size: 0.75rem;
+    }
+
+    &__item-price {
+        color: @blue;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    &__item-badge {
+        color: @white;
+        font-weight: 700;
+        font-size: 0.75rem !important;
+        text-decoration: none;
+        padding-top: 0.125rem;
+        padding-right: 0.25rem;
+        padding-bottom: 0.125rem;
+        padding-left: 0.25rem;
+        border-radius: 0.125rem;
+
+        &--red {
+            background: @red;
+        }
+
+        &--magenta {
+            background: @magenta;
+        }
+
+        &--green {
+            background: @green;
+        }
+    }
+
+    &__item-sale {
+        color: @dark-gray;
+        font-weight: 500;
+        font-size: 1rem;
+        text-decoration: line-through;
+
+        .promotions__item-badge {
+            font-size: 1rem !important;
+        }
+    }
+
+    &__item-bonus {
+        color: @dark-gray;
+        font-weight: 400;
+        font-size: 0.75rem;
+    }
+
+    &__badges {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+    }
+
+    &__favorite {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        background-color: @gray;
+        border-color: @white !important;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+            background-color: @gray;
+            border-color: @white !important;
+
+            .promotions__favorite-img {
+                background-color: @red;
+            }
+        }
+    }
+
+    &__favorite-img {
+        mask: url('../img/favorite.svg') no-repeat center / contain;
+        background-color: @black;
+        transition: background-color 0.3s ease-in-out;
+        width: 25px;
+        height: 25px;
+    }
+
+    &__cart {
+        position: absolute;
+        bottom: 6rem;
+        right: 0.75rem;
+        background-color: @blue;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken(@blue, 20%);
+        }
+    }
+
+    &__cart-img {
+        mask: url('../img/bag.svg') no-repeat center / contain;
+        background-color: @white;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__btn,
+    &__prev,
+    &__next {
+        border-color: @white !important;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(8px);
+
+        &:hover,
+        &:focus {
+            background: @black;
+        }
+    }
+
+    &__btn {
+        font-size: 1rem;
+        color: @white;
+    }
+
+    &__prev {
+        position: absolute;
+        top: 40%;
+        left: 0.75rem;
+        transform: translateY(-50%);
+        padding: 0.625rem 0.5rem;
+
+    }
+
+    &__next {
+        position: absolute;
+        top: 40%;
+        right: 0.75rem;
+        transform: translateY(-50%);
+        padding: 0.625rem 0.5rem;
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
