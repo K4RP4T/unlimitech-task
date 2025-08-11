@@ -26,13 +26,12 @@
         margin-bottom: 8rem;
     }
 
-    &__content-container {
-        height: 6rem;
+    &__item,
+    &__img-container {
+        position: relative;
     }
 
-    &__item,
-    &__img-wrapper {
-        position: relative;
+    &__item {
 
         &:hover .promotions__img--hover,
         &:hover .promotions__favorite,
@@ -79,6 +78,7 @@
         color: @white;
         font-weight: 700;
         font-size: 0.75rem !important;
+        line-height: 1.125rem;
         text-decoration: none;
         padding-top: 0.125rem;
         padding-right: 0.25rem;
@@ -151,7 +151,7 @@
 
     &__cart {
         position: absolute;
-        bottom: 6rem;
+        bottom: -0.75rem;
         right: 0.75rem;
         background-color: @blue;
         opacity: 0;
