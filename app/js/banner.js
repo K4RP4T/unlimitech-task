@@ -9,6 +9,7 @@ $(document).ready(function () {
             dots: true,
             easing: 'ease-in-out',
             initialSlide: 0,
+            lazyLoad: 'progressive',
             speed: 300
         });
     });

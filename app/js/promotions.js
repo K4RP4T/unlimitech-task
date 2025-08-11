@@ -9,6 +9,7 @@ $(document).ready(function () {
             dots: true,
             easing: 'ease-in-out',
             initialSlide: 4,
+            lazyLoad: 'ondemand',
             slidesToShow: 4,
             slidesToScroll: 4,
             speed: 300

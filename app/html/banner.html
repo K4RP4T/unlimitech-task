@@ -1,6 +1,6 @@
 <div class="rounded-4 banner__slider">
     <div class="d-flex rounded-4 banner__item">
-        <img src="img/banner_1.png" alt="Nowa kolekcja" class="img-fluid rounded-4 banner__img">
+        <img data-lazy="img/banner_1.png" alt="Nowa kolekcja" draggable="false" class="img-fluid rounded-4 banner__img">
         <div class="d-flex banner__content">
             <div class="flex-fill">
                 <h1 class="banner__title">Nowa kolekcja</h1>
@@ -13,7 +13,8 @@
         </div>
     </div>
     <div class="d-flex rounded-4 banner__item">
-        <img src="img/banner_2.png" alt="Najgorętsze trendy tego sezonu" class="img-fluid rounded-4 banner__img">
+        <img data-lazy="img/banner_2.png" alt="Najgorętsze trendy tego sezonu" draggable="false"
+            class="img-fluid rounded-4 banner__img">
         <div class="d-flex banner__content">
             <div class="flex-fill">
                 <h1 class="banner__title">Najgorętsze trendy tego sezonu</h1>
@@ -27,9 +28,9 @@
     </div>
 </div>
 <button type="button" aria-label="Poprzedni baner" class="btn d-flex border rounded-circle banner__prev">
-    <img src="img/left.svg" alt="Poprzednie" width="16" height="12" draggable="false">
+    <img src="img/left.svg" loading="lazy" alt="Poprzednie" width="16" height="12" draggable="false">
 </button>
 <button type="button" aria-label="Następny baner" class="btn d-flex border rounded-circle banner__next">
-    <img src="img/right.svg" alt="Następne" width="16" height="12" draggable="false">
+    <img src="img/right.svg" loading="lazy" alt="Następne" width="16" height="12" draggable="false">
 </button>
 <div class="banner__dots"></div>
