@@ -1,4 +1,7 @@
 .banner {
+    position: relative;
+    margin-bottom: 7rem;
+
     &__item {
         position: relative;
         overflow: hidden;
@@ -35,6 +38,7 @@
     &__btn,
     &__prev,
     &__next {
+        border-color: @white !important;
         box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(8px);
 
@@ -72,9 +76,4 @@
         left: 50%;
         transform: translateX(-50%);
     }
-}
-
-.banner-container {
-    position: relative;
-    margin-bottom: 7rem;
 }

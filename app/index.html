@@ -90,19 +90,19 @@
                     </div>
                 </form>
                 <div class="text-end d-flex">
-                    <div class="btn-wrapper border rounded-circle m-1">
+                    <div class="border rounded-circle m-1">
                         <button type="button" aria-label="Konto"
                             class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/account.svg" alt="Konto" width="20" height="20" draggable="false">
                         </button>
                     </div>
-                    <div class="btn-wrapper border rounded-circle m-1">
+                    <div class="border rounded-circle m-1">
                         <button type="button" aria-label="Ulubione"
                             class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/favorite.svg" alt="Ulubione" width="20" height="20" draggable="false">
                         </button>
                     </div>
-                    <div class="btn-wrapper border rounded-circle m-1">
+                    <div class="border rounded-circle m-1">
                         <button type="button" aria-label="Koszyk"
                             class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
                             <img src="img/bag.svg" alt="Koszyk" width="20" height="20" draggable="false">
@@ -113,8 +113,8 @@
         </div>
     </nav>
 
-    <section class="container p-0 banner-container">
-        <div class="rounded-4 banner">
+    <section class="container p-0 banner">
+        <div class="rounded-4 banner__slider">
             <div class="d-flex rounded-4 banner__item">
                 <img src="img/banner_1.png" alt="Nowa kolekcja" class="img-fluid rounded-4 banner__img">
                 <div class="d-flex banner__content">
@@ -202,6 +202,380 @@
                     <h2 class="categories__text">Wyprzedaż</h2>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <section class="container px-0 promotions">
+        <div class="d-flex justify-content-between align-items-center promotions__title">
+            <div class="d-flex align-items-center">
+                <h2 class="mb-0 fw-bolder promotions__main-title">Promocje</h2>
+                <span class="px-3 fw-bold fs-6 promotions__text">|</span>
+                <span class="promotions__text">Nowości</span>
+                <span class="px-3 fw-bold fs-6 promotions__text">|</span>
+                <span class="promotions__text">Bestsellery</span>
+            </div>
+            <a href="#" class="nav-link text-decoration-none promotions__link">Zobacz wszystkie</a>
+        </div>
+        <div class="promotions__container">
+            <div class="rounded-4 promotions__slider">
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty mokasyny na grubej podeszwie</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-price">350,10zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span
+                            class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+                <div class="d-flex flex-column px-1 rounded-4 promotions__item">
+                    <div class="promotions__img-wrapper">
+                        <img src="img/promotions_2.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img">
+                        <img src="img/promotions_2_hover.png" alt="Półbuty skóra naturalna - model 258"
+                            class="img-fluid rounded-4 promotions__img--hover">
+                    </div>
+                    <div class="d-flex px-1 py-2 promotions__content">
+                        <div class="promotions__content-container">
+                            <p class="mb-1 promotions__item-name">Półbuty skóra naturalna - model 258</p>
+                            <p class="mb-1 promotions__item-description">Zapato | Dostępny</p>
+                            <p class="mb-1 promotions__item-sale">
+                                <span
+                                    class="badge me-2 promotions__item-badge promotions__item-badge--red">350,10zł</span>399,99zł
+                            </p>
+                            <p class="mb-1 promotions__item-bonus">Najniższa cena z 30 dni przed obniżką: 399,99zł</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+                        <span class="badge mb-2 promotions__item-badge promotions__item-badge--red">PROMOCJA</span>
+                    </div>
+                    <button type="button" aria-label="Dodaj do ulubionych"
+                        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+                        <div class="promotions__favorite-img"></div>
+                    </button>
+                    <button type="button" aria-label="Dodaj do koszyka"
+                        class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+                        <div class="promotions__cart-img"></div>
+                    </button>
+                </div>
+            </div>
+            <button type="button" aria-label="Poprzednie promocje"
+                class="btn d-flex border rounded-circle promotions__prev">
+                <img src="img/left.svg" alt="Poprzednie" width="16" height="12" draggable="false">
+            </button>
+            <button type="button" aria-label="Następne promocje"
+                class="btn d-flex border rounded-circle promotions__next">
+                <img src="img/right.svg" alt="Następne" width="16" height="12" draggable="false">
+            </button>
+            <div class="promotions__dots"></div>
         </div>
     </section>
 
@@ -387,6 +761,7 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/promotions.js"></script>
 </body>
 
 </html>
