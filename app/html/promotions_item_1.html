@@ -1,8 +1,19 @@
-<div class="promotions__img-wrapper">
-    <img data-lazy="img/promotions_1.png" alt="Półbuty mokasyny na grubej podeszwie"
+<div class="promotions__img-container">
+    <img src="img/promotions_1.png" loading="lazy" alt="Półbuty mokasyny na grubej podeszwie"
         class="img-fluid rounded-4 promotions__img">
-    <img data-lazy="img/promotions_1_hover.png" alt="Półbuty mokasyny na grubej podeszwie"
+    <img src="img/promotions_1_hover.png" loading="lazy" alt="Półbuty mokasyny na grubej podeszwie"
         class="img-fluid rounded-4 promotions__img--hover">
+    <div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
+        <span class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
+        <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
+    </div>
+    <button type="button" aria-label="Dodaj do ulubionych"
+        class="btn d-flex border rounded-circle p-1 promotions__favorite">
+        <span class="promotions__favorite-img"></span>
+    </button>
+    <button type="button" aria-label="Dodaj do koszyka" class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
+        <span class="promotions__cart-img"></span>
+    </button>
 </div>
 <div class="d-flex px-1 py-2 promotions__content">
     <div class="promotions__content-container">
@@ -11,14 +22,3 @@
         <p class="mb-1 promotions__item-price">350,10zł</p>
     </div>
 </div>
-<div class="d-flex flex-column justify-content-start align-items-start promotions__badges">
-    <span class="badge mb-2 promotions__item-badge promotions__item-badge--magenta">BESTSELLER</span>
-    <span class="badge mb-2 promotions__item-badge promotions__item-badge--green">NOWOŚĆ</span>
-</div>
-<button type="button" aria-label="Dodaj do ulubionych"
-    class="btn d-flex border rounded-circle p-1 promotions__favorite">
-    <div class="promotions__favorite-img"></div>
-</button>
-<button type="button" aria-label="Dodaj do koszyka" class="btn d-flex border-0 rounded-circle p-2 promotions__cart">
-    <div class="promotions__cart-img"></div>
-</button>

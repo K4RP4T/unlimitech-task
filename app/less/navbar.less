@@ -1,10 +1,37 @@
 .navi {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
     &__link {
         color: @black;
         padding: 0 0.75rem;
 
         &--red {
             color: @red;
+        }
+
+        &:hover .navi__chevron,
+        &:active .navi__chevron,
+        &:focus .navi__chevron {
+            background-color: @blue;
+        }
+    }
+
+    &__dropdown {
+        background-color: @white;
+    }
+
+    &__chevron {
+        display: inline-block;
+        mask: url('../img/chevron.svg') no-repeat center / contain;
+        background-color: @black;
+        width: 8px;
+        height: 5px;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &--open {
+            transform: rotate(180deg);
         }
     }
 
