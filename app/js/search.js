@@ -5,12 +5,12 @@ $(document).on("submit", ".search__form", function (e) {
 });
 
 $(document).on("click", ".search__all", function (e) {
-    e.preventDefault();
+    e.stopPropagation();
     toggleSearch();
 });
 
 $(document).on("click", ".search__btn-close", function (e) {
-    e.preventDefault();
+    e.stopPropagation();
     toggleSearch();
 });
 

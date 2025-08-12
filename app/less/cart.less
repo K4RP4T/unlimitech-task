@@ -1,0 +1,143 @@
+.cart {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 39rem;
+    height: 100vh;
+    background-color: @white;
+    box-shadow: -20px 4px 32px 0px #0000000D;
+    z-index: 999;
+    transform-origin: right center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+
+    &--visible {
+        transform: scaleX(1);
+    }
+
+    &__container {
+        position: relative;
+        height: 100%;
+    }
+
+    &__header {
+        color: @black;
+        padding-top: 1.75rem;
+        padding-right: 3.75rem;
+        padding-left: 3.75rem;
+        margin-bottom: 2rem;
+    }
+
+    &__close {
+        background-color: @gray;
+
+        &:hover {
+            background-color: darken(@gray, 15%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: darken(@gray, 30%) !important;
+        }
+    }
+
+    &__items {
+        padding-right: 3.75rem;
+        padding-left: 3.75rem;
+    }
+
+    &__item {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    &__img {
+        margin-right: 1.25rem;
+    }
+
+    &__item-name {
+        color: @black;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    &__item-price {
+        color: @black;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    &__delete {
+        margin-top: -1rem;
+        background-color: @white;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @gray;
+
+            .cart__delete-img {
+                background-color: @red;
+            }
+        }
+    }
+
+    &__delete-img {
+        mask: url('../img/trash.svg') no-repeat center / contain;
+        background-color: @black;
+        transition: background-color 0.3s ease-in-out;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-top: 2rem;
+        padding-right: 3.75rem;
+        padding-bottom: 2rem;
+        padding-left: 3.75rem;
+        background-color: @gray;
+    }
+
+    &__footer-text {
+        color: @black;
+        line-height: 22px;
+    }
+
+    &__footer-price {
+        color: @blue;
+    }
+
+    &__footer-sum {
+        color: @blue;
+        font-size: 1.125rem;
+    }
+
+    &__footer-button {
+        line-height: 18px;
+        background-color: @blue;
+        color: @white;
+
+        &:hover {
+            background-color: darken(@blue, 10%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: darken(@blue, 20%) !important;
+        }
+    }
+
+    &__progress {
+        height: 4px;
+        margin-bottom: 2rem;
+    }
+
+    &__progress-bar {
+        width: 76%;
+    }
+}
