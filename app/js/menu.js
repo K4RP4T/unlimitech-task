@@ -87,5 +87,5 @@ function loadImage(seed, alt) {
     $img.on("load", function () {
         $img.show();
         $placeholder.hide();
-    }).attr('src', (seed === "botki") ? "img/botki.png" : `https://picsum.photos/seed/${seed}/403/521`).attr('alt', alt);
+    }).attr('src', (seed === "botki") ? "img/botki.png" : `https://picsum.photos/seed/${seed}/403/521.webp`).attr('alt', alt);
 }
