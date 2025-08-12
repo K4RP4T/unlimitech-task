@@ -1,20 +1,3 @@
-$(document).ready(function () {
-    $(".navi").load("html/navbar.html", function () {
-        $(".menu").load("html/menu.html");
-    });
-});
-
-$(document).on("click", ".navi__dropdown", function (e) {
-    e.stopPropagation();
-    toggleMenu();
-});
-
-$(document).on("click", function (e) {
-    if (!$(e.target).closest(".menu, .navi__dropdown").length && $(".navi__chevron").hasClass("navi__chevron--open")) {
-        toggleMenu();
-    }
-});
-
 const submenuData = {
     półbuty: {
         left: ["półbuty z noskiem w szpic", "półbuty na słupku", "półbuty na koturnie", "półbuty Mary Jane", "półbuty z wycięciami", "półbuty lakierowane", "baleriny z zakrytym podbiciem"],
