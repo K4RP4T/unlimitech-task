@@ -51,17 +51,21 @@ $(document).on("click", ".menu__item", function () {
     }
 
     if (submenuData[itemKey]) {
-        $(".menu__submenu-column--left").empty();
-        $(".menu__submenu-column--right").empty();
+        const $submenuLeft = $(".menu__submenu-column--left");
+        const $submenuRight = $(".menu__submenu-column--right");
 
-        loadImage(itemKey, itemKey.charAt(0).toUpperCase() + itemKey.slice(1));
+        const leftLinks = submenuData[itemKey].left
+            .map(shoe => `<a href="#" class="nav-link menu__submenu-link">${shoe}</a>`)
+            .join("");
 
-        $.each(submenuData[itemKey].left, function (index, shoe) {
-            $(".menu__submenu-column--left").append(`<a href="#" class="nav-link menu__submenu-link">${shoe}</a>`);
-        });
-        $.each(submenuData[itemKey].right, function (index, shoe) {
-            $(".menu__submenu-column--right").append(`<a href="#" class="nav-link menu__submenu-link">${shoe}</a>`);
-        });
+        const rightLinks = submenuData[itemKey].right
+            .map(shoe => `<a href="#" class="nav-link menu__submenu-link">${shoe}</a>`)
+            .join("");
+
+        $submenuLeft.html(leftLinks);
+        $submenuRight.html(rightLinks);
+
+        loadImage(itemKey.charAt(0).toUpperCase() + itemKey.slice(1));
     }
 });
 
@@ -69,23 +73,35 @@ function toggleMenu() {
     $(".menu").slideToggle(300);
     $(".navi__chevron").toggleClass("navi__chevron--open");
     $(".menu__item").removeClass("active");
-    $(".menu__submenu-column--left").empty();
-    $(".menu__submenu-column--right").empty();
+    $(".menu__submenu-column--left", ".menu__submenu-column--right").empty();
 
     if ($(".navi__chevron").hasClass("navi__chevron--open")) {
-        loadImage("unlimitech", "Unlimitech");
+        loadImage("Unlimitech");
+    } else {
+        unloadImage();
     }
 }
 
-function loadImage(seed, alt) {
+function loadImage(alt) {
+    unloadImage();
+
     const $placeholder = $(".menu__placeholder");
-    const $img = $(".menu__img");
-
     $placeholder.show();
-    $img.hide();
 
-    $img.on("load", function () {
-        $img.show();
+    const src =
+        alt === "Botki"
+            ? "img/botki.png"
+            : `https://picsum.photos/seed/${encodeURIComponent(alt)}/403/521.webp`;
+
+    $('<img src="' + src + '" alt="' + alt + '" class="img-fluid rounded-4 menu__img">').on('load', function () {
+        $(this).appendTo('.menu__img-wrapper');
         $placeholder.hide();
-    }).attr('src', (seed === "botki") ? "img/botki.png" : `https://picsum.photos/seed/${seed}/403/521.webp`).attr('alt', alt);
+    });
+}
+
+function unloadImage() {
+    const $img = $(".menu__img");
+    if ($img) {
+        $img.remove();
+    }
 }
