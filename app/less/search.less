@@ -31,6 +31,10 @@
             box-shadow: 0 0 0 .25rem @focus-blue;
             transition: box-shadow .15s ease-in-out;
         }
+
+        &:has(.search__input:autofill) {
+            background-color: @autofill;
+        }
     }
 
     &__input {

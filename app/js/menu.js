@@ -66,7 +66,7 @@ $(document).on("click", ".menu__item", function () {
 });
 
 function toggleMenu() {
-    $(".menu").fadeToggle(300);
+    $(".menu").slideToggle(300);
     $(".navi__chevron").toggleClass("navi__chevron--open");
     $(".menu__item").removeClass("active");
     $(".menu__submenu-column--left").empty();
