@@ -6,12 +6,13 @@
             <p class="mb-0 newsletter__text">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
                 nowościach,<br>promocjach i ofertach specjalnych!</p>
         </div>
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-1">
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-1 newsletter__form">
             <div class="d-flex flex-column">
                 <div class="input-group border rounded-pill newsletter__email">
                     <input type="email" name="email" autocomplete="email" required
                         class="form-control border-0 rounded-pill ps-4 pe-1 newsletter__email-input"
                         placeholder="Twój adres email" aria-label="Twój adres email"
+                        pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$"
                         oninvalid="this.setCustomValidity('Proszę podać prawidłowy adres e-mail.')"
                         oninput="this.setCustomValidity('')">
                     <button type="submit" aria-label="Wyślij adres email"
