@@ -2,7 +2,21 @@
     background-color: @blue;
 
     &__img {
-        margin-left: 3.75rem;
+        padding-left: 3.75rem;
+
+        @media @xl {
+            padding-left: 1rem;
+        }
+
+        @media @md {
+            padding-left: 0;
+        }
+    }
+
+    &__content-container {
+        @media @sm {
+            padding: 3rem 0.5rem;
+        }
     }
 
     &__content {
@@ -15,6 +29,7 @@
 
     &__text {
         font-size: 0.75rem;
+        line-height: 22px;
     }
 
     &__link {
@@ -23,6 +38,18 @@
 
     &__email-container {
         padding-right: 6rem;
+
+        @media @xl {
+            padding-right: 2rem;
+        }
+
+        @media @md {
+            padding-right: 1rem;
+        }
+
+        @media @sm {
+            padding-right: 0;
+        }
     }
 
     &__email {

@@ -17,22 +17,67 @@
         }
     }
 
+    &__img {
+        position: relative;
+        left: 0;
+        z-index: -1;
+
+        @media @xl {
+            left: -16rem;
+        }
+
+        @media @lg {
+            left: -27rem;
+        }
+
+        @media @md {
+            left: -37.5rem;
+        }
+
+        @media @sm {
+            left: -42.5rem;
+        }
+
+        @media @xs {
+            left: -39rem;
+        }
+
+        @media @xxs {
+            left: -41rem;
+        }
+    }
+
     &__content {
         position: absolute;
         bottom: 3rem;
         left: 3rem;
         width: calc(100% - 6rem);
         color: @white;
+
+        @media @lg {
+            bottom: 1.25rem;
+            left: 1rem;
+        }
     }
 
     &__title {
+        font-size: 2.5rem;
         font-weight: 900;
+
+        @media @lg {
+            font-size: 1.75rem;
+        }
     }
 
     &__text {
         font-size: 1rem;
         line-height: 1.75rem;
         color: @banner-text;
+
+        @media @lg {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
     }
 
     &__btn,
@@ -54,8 +99,13 @@
     }
 
     &__btn {
-        font-size: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
         color: @white;
+
+        @media @lg {
+            font-size: 0.875rem;
+        }
     }
 
     &__prev {

@@ -12,7 +12,49 @@ $(document).ready(function () {
             lazyLoad: "ondemand",
             slidesToShow: 4,
             slidesToScroll: 4,
-            speed: 300
+            speed: 300,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        centerMode: true,
+                        variableWidth: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        centerMode: true,
+                        variableWidth: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 375,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: false,
+                        dots: false
+                    }
+                }
+            ]
         });
 
         [1, 2].forEach(function (i) {
