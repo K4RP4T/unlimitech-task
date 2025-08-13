@@ -29,6 +29,10 @@
         margin-bottom: 2rem;
     }
 
+    &__title {
+        font-size: 2rem;
+    }
+
     &__close {
         background-color: @gray;
 
@@ -39,6 +43,11 @@
         &:active,
         &:focus {
             background-color: darken(@gray, 30%) !important;
+        }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
         }
     }
 
@@ -81,6 +90,11 @@
             .cart__delete-img {
                 background-color: @red;
             }
+        }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
         }
     }
 

@@ -4,12 +4,7 @@ $(document).on("submit", ".search__form", function (e) {
     $(".navi__search-input").val(text);
 });
 
-$(document).on("click", ".search__all", function (e) {
-    e.stopPropagation();
-    toggleSearch();
-});
-
-$(document).on("click", ".search__btn-close", function (e) {
+$(document).on("click", ".search__all, .search__btn-close", function (e) {
     e.stopPropagation();
     toggleSearch();
 });
@@ -23,4 +18,13 @@ $(document).on("click", function (e) {
 function toggleSearch() {
     $(".overlay").fadeToggle(300);
     $(".search").slideToggle(300);
+    $(".search").toggleClass("search--visible");
+
+    if ($(".search").hasClass("search--visible")) {
+        $("body > *:not(.search)").attr("inert", "");
+        $(".search__input").focus();
+    } else {
+        $("body > *:not(.search)").removeAttr("inert");
+        $(".navi__search-input").focus();
+    }
 }

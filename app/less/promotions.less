@@ -5,6 +5,7 @@
 
     &__main-title {
         color: @blue;
+        font-size: 2rem;
     }
 
     &__text {
@@ -139,13 +140,19 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: @gray;
             border-color: @white !important;
 
             .promotions__favorite-img {
                 background-color: @red;
             }
+        }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
         }
     }
 
@@ -169,6 +176,11 @@
         &:focus {
             background-color: darken(@blue, 20%);
         }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
     }
 
     &__cart-img {
@@ -189,6 +201,11 @@
         &:focus {
             background: @black;
         }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
     }
 
     &__btn {
@@ -202,7 +219,7 @@
         left: 0.75rem;
         transform: translateY(-50%);
         padding: 0.625rem 0.5rem;
-
+        z-index: 1;
     }
 
     &__next {
@@ -211,6 +228,7 @@
         right: 0.75rem;
         transform: translateY(-50%);
         padding: 0.625rem 0.5rem;
+        z-index: 1;
     }
 
     &__dots {
@@ -218,5 +236,16 @@
         bottom: -10%;
         left: 50%;
         transform: translateX(-50%);
+
+        &:focus-within {
+            outline: 0.125rem solid @black;
+            outline-offset: 0.125rem;
+        }
+
+        li {
+            &:focus {
+                outline: none;
+            }
+        }
     }
 }

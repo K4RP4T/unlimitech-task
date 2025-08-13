@@ -22,6 +22,11 @@
         &:focus {
             background-color: darken(@gray, 30%) !important;
         }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
     }
 
     &__input-group {
@@ -47,6 +52,7 @@
 
     &__title {
         margin-bottom: 2rem;
+        font-size: 2rem;
     }
 
     &__all {

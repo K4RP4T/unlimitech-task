@@ -33,7 +33,11 @@ const submenuData = {
     },
 };
 
-$(document).on("click", ".menu__item", function () {
+$(document).on("click keydown", ".menu__item", function (e) {
+    if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+        return;
+    }
+
     const $item = $(this);
 
     if ($item.hasClass("active")) {
@@ -41,7 +45,9 @@ $(document).on("click", ".menu__item", function () {
     }
 
     $(".menu__item").removeClass("active");
+    $(".menu__item").attr("aria-selected", "false");
     $item.addClass("active");
+    $item.attr("aria-selected", "true");
 
     const itemKey = $item.data("item");
 
@@ -67,13 +73,26 @@ $(document).on("click", ".menu__item", function () {
 
         loadImage(itemKey.charAt(0).toUpperCase() + itemKey.slice(1));
     }
+
+    $(".menu__submenu-column--left .menu__submenu-link:first-child").focus();
 });
 
 function toggleMenu() {
-    $(".menu").slideToggle(300);
+    $(".navi__dropdown").attr("aria-expanded", function (i, val) {
+        return val === "true" ? "false" : "true";
+    });
+
     $(".navi__chevron").toggleClass("navi__chevron--open");
     $(".menu__item").removeClass("active");
     $(".menu__submenu-column--left", ".menu__submenu-column--right").empty();
+
+    $(".menu").slideToggle(300, function () {
+        if ($(".navi__chevron").hasClass("navi__chevron--open")) {
+            $(".menu__item:first-child").focus();
+        } else {
+            $(".navi__dropdown").focus();
+        }
+    });
 
     if ($(".navi__chevron").hasClass("navi__chevron--open")) {
         loadImage("Unlimitech");
@@ -95,7 +114,7 @@ function loadImage(alt) {
             ? "img/botki.webp"
             : `https://picsum.photos/seed/${encodeURIComponent(alt)}/403/521.webp`;
 
-    const $newImg = $('<img>', {
+    const $newImg = $("<img>", {
         src: src,
         alt: alt,
         class: "img-fluid rounded-4 menu__img",
@@ -103,7 +122,7 @@ function loadImage(alt) {
 
     const requestId = ++currentImageRequestId;
 
-    $newImg.on('load', function () {
+    $newImg.on("load", function () {
         if (requestId === currentImageRequestId) {
             $(".menu__img-wrapper").append($newImg);
             $placeholder.hide();
