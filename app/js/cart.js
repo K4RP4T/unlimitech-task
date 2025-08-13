@@ -25,10 +25,10 @@ function toggleCart() {
     $(".cart").toggleClass("cart--visible");
 
     if ($(".cart").hasClass("cart--visible")) {
-        $("body > *:not(.cart)").attr("inert", "");
+        $("body > *:not(.main), .main > *:not(.cart)").attr("inert", "");
         $(".cart__close").focus();
     } else {
-        $("body > *:not(.cart)").removeAttr("inert");
+        $("body > *:not(.main), .main > *:not(.cart)").removeAttr("inert");
         $(".navi__cart-btn").focus();
     }
 }
