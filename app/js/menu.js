@@ -78,30 +78,35 @@ function toggleMenu() {
     if ($(".navi__chevron").hasClass("navi__chevron--open")) {
         loadImage("Unlimitech");
     } else {
-        unloadImage();
+        $(".menu__img").remove();
     }
 }
 
+let currentImageRequestId = 0;
+
 function loadImage(alt) {
-    unloadImage();
+    $(".menu__img").remove();
 
     const $placeholder = $(".menu__placeholder");
     $placeholder.show();
 
     const src =
         alt === "Botki"
-            ? "img/botki.png"
+            ? "img/botki.webp"
             : `https://picsum.photos/seed/${encodeURIComponent(alt)}/403/521.webp`;
 
-    $('<img src="' + src + '" alt="' + alt + '" class="img-fluid rounded-4 menu__img">').on('load', function () {
-        $(this).appendTo('.menu__img-wrapper');
-        $placeholder.hide();
+    const $newImg = $('<img>', {
+        src: src,
+        alt: alt,
+        class: "img-fluid rounded-4 menu__img",
     });
-}
 
-function unloadImage() {
-    const $img = $(".menu__img");
-    if ($img) {
-        $img.remove();
-    }
+    const requestId = ++currentImageRequestId;
+
+    $newImg.on('load', function () {
+        if (requestId === currentImageRequestId) {
+            $(".menu__img-wrapper").append($newImg);
+            $placeholder.hide();
+        }
+    });
 }
