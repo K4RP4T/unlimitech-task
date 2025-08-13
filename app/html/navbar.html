@@ -1,12 +1,13 @@
 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-    <a href="/" aria-label="Logo Unlimitech" class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
+    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 me-4 text-decoration-none">
         <img src="img/logo.svg" loading="lazy" alt="Logo Unlimitech" draggable="false">
     </a>
     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li>
-            <button type="button" class="d-flex align-items-center nav-link navi__link navi__dropdown">Damskie buty
+            <button type="button" aria-haspopup="true" aria-expanded="false"
+                class="d-flex align-items-center nav-link navi__link navi__dropdown">Damskie buty
                 skórzane
-                <span class="ps-4 navi__chevron"></span>
+                <span class="ps-4 navi__chevron" aria-hidden="true"></span>
             </button>
         </li>
         <li><a href="#" class="nav-link text-decoration-none navi__link">Bony podarunkowe</a></li>
@@ -18,25 +19,31 @@
         <div class="input-group border rounded-pill navi__search">
             <input type="search" name="search" class="form-control border-0 rounded-pill pe-1 navi__search-input"
                 placeholder="Wyszukaj" aria-label="Wyszukaj">
-            <button type="submit" aria-label="Szukaj" class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn navi__search-btn">
-                <img src="img/search.svg" loading="lazy" alt="Szukaj" width="20" height="20" draggable="false">
+            <button type="submit" aria-label="Szukaj"
+                class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 navi__btn navi__search-btn">
+                <img src="img/search.svg" loading="lazy" alt="" role="presentation" width="20" height="20"
+                    draggable="false">
             </button>
         </div>
     </form>
     <div class="text-end d-flex">
         <div class="border rounded-circle m-1">
             <button type="button" aria-label="Konto" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
-                <img src="img/account.svg" loading="lazy" alt="Konto" width="20" height="20" draggable="false">
+                <img src="img/account.svg" loading="lazy" alt="" role="presentation" width="20" height="20"
+                    draggable="false">
             </button>
         </div>
         <div class="border rounded-circle m-1">
             <button type="button" aria-label="Ulubione" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn">
-                <img src="img/favorite.svg" loading="lazy" alt="Ulubione" width="20" height="20" draggable="false">
+                <img src="img/favorite.svg" loading="lazy" alt="" role="presentation" width="20" height="20"
+                    draggable="false">
             </button>
         </div>
         <div class="border rounded-circle m-1">
-            <button type="button" aria-label="Koszyk" class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn navi__cart-btn">
-                <img src="img/bag.svg" loading="lazy" alt="Koszyk" width="20" height="20" draggable="false">
+            <button type="button" aria-label="Koszyk"
+                class="btn d-flex border-0 rounded-circle p-2 m-1 navi__btn navi__cart-btn">
+                <img src="img/bag.svg" loading="lazy" alt="" role="presentation" width="20" height="20"
+                    draggable="false">
             </button>
         </div>
     </div>

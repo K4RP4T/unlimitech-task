@@ -5,12 +5,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).on("click", ".navi__cart-btn", function (e) {
-    e.stopPropagation();
-    toggleCart();
-});
-
-$(document).on("click", ".cart__close", function (e) {
+$(document).on("click", ".navi__cart-btn, .cart__close", function (e) {
     e.stopPropagation();
     toggleCart();
 });
@@ -22,6 +17,18 @@ $(document).on("click", function (e) {
 });
 
 function toggleCart() {
+    $(".cart button").attr("tabindex", function (i, val) {
+        return val === "-1" ? "0" : "-1";
+    });
+
     $(".overlay").fadeToggle(300);
     $(".cart").toggleClass("cart--visible");
+
+    if ($(".cart").hasClass("cart--visible")) {
+        $("body > *:not(.cart)").attr("inert", "");
+        $(".cart__close").focus();
+    } else {
+        $("body > *:not(.cart)").removeAttr("inert");
+        $(".navi__cart-btn").focus();
+    }
 }

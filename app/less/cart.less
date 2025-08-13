@@ -44,6 +44,11 @@
         &:focus {
             background-color: darken(@gray, 30%) !important;
         }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
     }
 
     &__items {
@@ -85,6 +90,11 @@
             .cart__delete-img {
                 background-color: @red;
             }
+        }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
         }
     }
 

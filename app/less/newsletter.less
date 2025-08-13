@@ -61,6 +61,18 @@
         &:focus {
             background-color: lighten(@black, 40%) !important;
         }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
+    }
+
+    &__email-checkbox {
+        &:focus {
+            outline: 0.125rem solid @black;
+            outline-offset: 0.125rem;
+        }
     }
 }
 
