@@ -10,6 +10,6 @@
     "build:less": "lessc less/main.less css/main.css",
     "watch:less": "nodemon -e less -x \"npm run build:less\"",
     "start": "npm install && npm run build:less && http-server -p 3000 -o",
-    "build": "npm run build:less && vercel --prod"
+    "build": "npm run build:less"
   }
 }
