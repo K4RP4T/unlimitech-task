@@ -12,6 +12,10 @@
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 
+    @media @md {
+        width: 100%;
+    }
+
     &--visible {
         transform: scaleX(1);
     }
@@ -27,10 +31,21 @@
         padding-right: 3.75rem;
         padding-left: 3.75rem;
         margin-bottom: 2rem;
+
+        @media @md {
+            padding-top: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__title {
         font-size: 2rem;
+
+        @media @md {
+            font-size: 1.5rem;
+        }
     }
 
     &__close {
@@ -54,15 +69,29 @@
     &__items {
         padding-right: 3.75rem;
         padding-left: 3.75rem;
+
+        @media @md {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
     }
 
     &__item {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+
+        @media @md {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 
     &__img {
         margin-right: 1.25rem;
+
+        @media @md {
+            margin-right: 0.75rem;
+        }
     }
 
     &__item-name {
@@ -81,6 +110,11 @@
         margin-top: -1rem;
         background-color: @white;
         transition: background-color 0.3s ease-in-out;
+
+        @media @md {
+            margin-top: -0.75rem;
+            padding: 0.75rem !important;
+        }
 
         &:hover,
         &:active,
@@ -115,6 +149,13 @@
         padding-bottom: 2rem;
         padding-left: 3.75rem;
         background-color: @gray;
+
+        @media @md {
+            padding-top: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+        }
     }
 
     &__footer-text {

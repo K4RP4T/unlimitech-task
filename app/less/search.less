@@ -7,8 +7,24 @@
     background-color: @white;
     z-index: 999;
 
+    @media @md {
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
     &__container {
+        @media @md {
+            max-width: 100%;
+        }
+    }
+
+    &__bar {
         margin-bottom: 1.5rem;
+
+        @media @md {
+            margin-bottom: 1rem;
+        }
     }
 
     &__btn {
@@ -53,6 +69,11 @@
     &__title {
         margin-bottom: 2rem;
         font-size: 2rem;
+
+        @media @md {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
     }
 
     &__all {
