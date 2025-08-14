@@ -1,0 +1,140 @@
+.menu {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    background-color: @white;
+    z-index: 900;
+
+    @media @sm {
+        display: none !important;
+    }
+
+    &__item {
+        background-color: @gray;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:last-of-type {
+            padding-top: 0.875rem !important;
+            padding-bottom: 0.875rem !important;
+        }
+
+        &.active {
+            .menu__text {
+                color: @white;
+            }
+
+            .menu__icon {
+                background-color: @white;
+            }
+        }
+    }
+
+    &__item-content {
+        padding-left: 2.5rem;
+
+        @media @md {
+            padding-left: 0;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        background-color: @black;
+        width: 36px;
+        height: 36px;
+        margin-right: 0.75rem;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &--półbuty {
+            mask: url('../img/półbuty_icon.svg') no-repeat center / contain;
+        }
+
+        &--jazzówki {
+            mask: url('../img/jazzówki_icon.svg') no-repeat center / contain;
+        }
+
+        &--czółenka {
+            mask: url('../img/czółenka_icon.svg') no-repeat center / contain;
+        }
+
+        &--baleriny {
+            mask: url('../img/baleriny_icon.svg') no-repeat center / contain;
+        }
+
+        &--sandały {
+            mask: url('../img/sandały_icon.svg') no-repeat center / contain;
+        }
+
+        &--klapki {
+            mask: url('../img/klapki_icon.svg') no-repeat center / contain;
+        }
+
+        &--botki {
+            mask: url('../img/botki_icon.svg') no-repeat center / contain;
+        }
+
+        &--kozaki {
+            mask: url('../img/kozaki_icon.svg') no-repeat center / contain;
+        }
+
+        &--outlet {
+            mask: url('../img/outlet_icon.svg') no-repeat center / contain;
+        }
+    }
+
+    &__text {
+        color: @black;
+        transition: color 0.3s ease-in-out;
+    }
+
+    &__submenu {
+        background-color: @gray;
+    }
+
+    &__submenu-content {
+        padding: 2.5rem;
+    }
+
+    &__submenu-column-wrapper {
+        height: 521px;
+    }
+
+    &__submenu-column {
+        height: fit-content !important;
+    }
+
+    &__submenu-link {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.625rem;
+        width: 50%;
+        transition: color 0.3s ease-in-out;
+
+        @media @lg {
+            width: 100%;
+        }
+
+        @media @md {
+            width: 50%;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: @blue;
+        }
+    }
+
+    &__img-wrapper {
+        position: relative;
+        width: 403px;
+        height: 521px;
+        overflow: hidden;
+    }
+
+    &__placeholder {
+        color: @blue;
+    }
+}

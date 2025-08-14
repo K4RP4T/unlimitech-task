@@ -1,0 +1,128 @@
+.navi {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    @media @sm {
+        margin-top: 1.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    &__link {
+        color: @black;
+        padding: 0 0.75rem;
+
+        &--red {
+            color: @red;
+        }
+
+        &:hover .navi__chevron,
+        &:active .navi__chevron,
+        &:focus .navi__chevron {
+            background-color: @blue;
+        }
+    }
+
+    &__dropdown {
+        background-color: @white;
+    }
+
+    &__chevron {
+        display: inline-block;
+        mask: url('../img/chevron.svg') no-repeat center / contain;
+        background-color: @black;
+        width: 8px;
+        height: 5px;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &--open {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__btn {
+        background-color: @gray;
+
+        @media @sm {
+            margin: 0.125rem !important;
+        }
+
+        &:hover {
+            background-color: darken(@gray, 15%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: darken(@gray, 30%) !important;
+        }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
+    }
+
+    &__search {
+        background-color: @white;
+
+        &:focus-within {
+            box-shadow: 0 0 0 .25rem @focus-blue;
+            transition: box-shadow .15s ease-in-out;
+        }
+
+        &:has(.navi__search-input:autofill) {
+            background-color: @autofill;
+        }
+    }
+
+    &__search-input {
+        font-size: 0.75rem;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    @media @xl {
+        &__logo {
+            order: 1;
+        }
+
+        &__search-form {
+            order: 2;
+        }
+
+        &__buttons {
+            order: 3;
+        }
+
+        &__items {
+            order: 4;
+        }
+    }
+
+    @media @sm {
+        &__logo {
+            order: 1;
+            width: 131px;
+        }
+
+        &__buttons {
+            order: 2;
+        }
+
+        &__search-form {
+            order: 3;
+        }
+
+        &__items {
+            order: 4;
+        }
+    }
+
+    @media @xxs {
+        &__container {
+            justify-content: center !important;
+        }
+    }
+}

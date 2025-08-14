@@ -1,0 +1,111 @@
+.newsletter {
+    background-color: @blue;
+
+    &__img {
+        padding-left: 3.75rem;
+
+        @media @xl {
+            padding-left: 1rem;
+        }
+
+        @media @md {
+            padding-left: 0;
+        }
+    }
+
+    &__content-container {
+        @media @sm {
+            padding: 3rem 0.5rem;
+        }
+    }
+
+    &__content {
+        color: @white;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__text {
+        font-size: 0.75rem;
+        line-height: 22px;
+    }
+
+    &__link {
+        color: @white;
+    }
+
+    &__email-container {
+        padding-right: 6rem;
+
+        @media @xl {
+            padding-right: 2rem;
+        }
+
+        @media @md {
+            padding-right: 1rem;
+        }
+
+        @media @sm {
+            padding-right: 0;
+        }
+    }
+
+    &__email {
+        background-color: @white;
+
+        &:focus-within {
+            box-shadow: 0 0 0 .25rem @focus-white;
+            transition: box-shadow .15s ease-in-out;
+        }
+
+        &:has(.newsletter__email-input:autofill) {
+            background-color: @autofill;
+        }
+    }
+
+    &__email-input {
+        font-size: 1rem;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:autofill {
+            background-color: @white !important;
+        }
+    }
+
+    &__email-btn {
+        background-color: @black;
+
+        &:hover {
+            background-color: lighten(@black, 20%);
+        }
+
+        &:active,
+        &:focus {
+            background-color: lighten(@black, 40%) !important;
+        }
+
+        &:focus {
+            outline: 0.25rem solid @focus-blue;
+            outline-offset: 0.25rem;
+        }
+    }
+
+    &__email-checkbox {
+        &:focus {
+            outline: 0.125rem solid @black;
+            outline-offset: 0.125rem;
+        }
+    }
+}
+
+.toast-wrapper {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}

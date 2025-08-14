@@ -1,0 +1,78 @@
+.footer {
+    background-color: @gray;
+    color: @black;
+    font-size: 0.75rem;
+    padding-top: 5rem;
+    padding-right: 3.75rem;
+    padding-bottom: 2rem;
+    padding-left: 3.75rem;
+
+    @media @sm {
+        padding-top: 1.5rem;
+        padding-right: 1rem;
+        padding-bottom: 2.5rem;
+        padding-left: 1rem;
+    }
+
+    @media @xs {
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+        width: auto !important;
+    }
+
+    &__top {
+        padding-bottom: 2.25rem;
+    }
+
+    &__title {
+        color: @black !important;
+        background-color: @gray !important;
+        font-size: 1rem;
+        line-height: 22px;
+    }
+
+    &__content {
+        background-color: @gray;
+    }
+
+
+    &__bottom {
+        padding-top: 2.5rem;
+
+        @media @sm {
+            padding-top: 1.5rem;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        line-height: 22px;
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &__company {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.25rem;
+        height: 2rem;
+        margin-right: 0.75rem;
+        background-color: @white;
+    }
+
+    &__company-logo {
+        display: block;
+        margin: auto;
+    }
+
+    &__social {
+        margin-right: 5rem;
+    }
+
+    &__social-icon {
+        margin-right: 1.25rem;
+    }
+}

@@ -1,0 +1,35 @@
+<div class="d-flex">
+    <img src="img/newsletter.svg" loading="lazy" alt="Biuletyn" draggable="false" class="img-fluid d-none d-md-block newsletter__img">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center flex-fill newsletter__content-container">
+        <div class="d-flex flex-column justify-content-center pb-3 pb-md-0 newsletter__content">
+            <h2 class="fw-bolder mb-1 newsletter__title">Chcesz otrzymać 5% zniżki na swoje zakupy?</h2>
+            <p class="mb-0 newsletter__text">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+                nowościach, <br class="d-none d-lg-block">promocjach i ofertach specjalnych!</p>
+        </div>
+        <form class="col-12 col-md-5 newsletter__form">
+            <div class="d-flex flex-column newsletter__email-container">
+                <div class="input-group border rounded-pill newsletter__email">
+                    <input type="email" name="email" autocomplete="email" required
+                        class="form-control border-0 rounded-pill ps-4 pe-1 newsletter__email-input"
+                        placeholder="Twój adres email" aria-label="Twój adres email"
+                        pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$"
+                        oninvalid="this.setCustomValidity('Proszę podać prawidłowy adres e-mail.')"
+                        oninput="this.setCustomValidity('')">
+                    <button type="submit" aria-label="Wyślij adres email"
+                        class="btn d-flex border-0 rounded-circle p-2 m-1 ms-0 newsletter__email-btn">
+                        <img src="img/send.svg" loading="lazy" alt="" role="presentation" width="25" height="25" draggable="false">
+                    </button>
+                </div>
+                <label class="d-flex align-items-center p-2">
+                    <input type="checkbox" name="acceptation" required class="form-check-input mt-0 newsletter__email-checkbox"
+                        aria-label="Akceptacja regulaminu i polityki prywatności"
+                        oninvalid="this.setCustomValidity('Proszę zaakceptować regulamin i politykę prywatności.')"
+                        oninput="this.setCustomValidity('')">
+                    <span class="ps-2 newsletter__content newsletter__text">Akceptuję <a href="#"
+                            class="newsletter__link">Regulamin</a>
+                        i <a href="#" class="newsletter__link">Politykę Prywatności</a>.</span>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
