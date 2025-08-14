@@ -4,3 +4,5 @@ $(document).ready(function () {
     $(".categories").load("html/categories.html");
     $(".footer").load("html/footer.html");
 });
+
+const $inertElements = $(".menu-mobile, .cart, .favorite");

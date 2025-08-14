@@ -109,10 +109,6 @@ $(document).on("click keydown", ".menu__item", function (e) {
 });
 
 function toggleMenu() {
-    $(".navi__dropdown").attr("aria-expanded", function (i, val) {
-        return val === "true" ? "false" : "true";
-    });
-
     $(".navi__chevron").toggleClass("navi__chevron--open");
     $(".menu__item").removeClass("active");
     $(".menu__submenu-column").empty();

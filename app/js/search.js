@@ -21,10 +21,11 @@ function toggleSearch() {
     $(".search").toggleClass("search--visible");
 
     if ($(".search").hasClass("search--visible")) {
-        $("body > *:not(.main), .main > *:not(.search)").attr("inert", "");
+        $("body > *:not(.search)").attr("inert", "");
         $(".search__input").focus();
     } else {
-        $("body > *:not(.main), .main > *:not(.search)").removeAttr("inert");
+        $("body > *:not(.search)").removeAttr("inert");
+        $inertElements.attr("inert", "");
         $(".navi__search-input").focus();
     }
 }
