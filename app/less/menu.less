@@ -29,6 +29,10 @@
 
     &__item-content {
         padding-left: 2.5rem;
+
+        @media @md {
+            padding-left: 0;
+        }
     }
 
     &__icon {
@@ -93,11 +97,28 @@
         padding: 2.5rem;
     }
 
+    &__submenu-column-wrapper {
+        height: 521px;
+    }
+
+    &__submenu-column {
+        height: fit-content !important;
+    }
+
     &__submenu-link {
         font-size: 0.875rem;
         line-height: 1.25rem;
         margin-bottom: 0.625rem;
+        width: 50%;
         transition: color 0.3s ease-in-out;
+
+        @media @lg {
+            width: 100%;
+        }
+
+        @media @md {
+            width: 50%;
+        }
 
         &:hover,
         &:focus,

@@ -4,7 +4,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).on("click", ".navi__dropdown", function (e) {
+$(document).on("click", ".navi__dropdown, .navi__menu-btn", function (e) {
     e.stopPropagation();
     toggleMenu();
 });
