@@ -5,11 +5,6 @@ $(document).ready(function () {
     });
 });
 
-$(document).on("click", ".navi__cart-btn, .cart__close", function (e) {
-    e.stopPropagation();
-    toggleCart();
-});
-
 $(document).on("click", function (e) {
     if (!$(e.target).closest(".cart").length && $(".cart").hasClass("cart--visible")) {
         toggleCart();

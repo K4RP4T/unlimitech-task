@@ -21,3 +21,13 @@ $(document).on("submit", ".navi__search-form", function (e) {
     $(".search__input").val(text);
     toggleSearch();
 });
+
+$(document).on("click", ".navi__favorite-btn, .favorite__close", function (e) {
+    e.stopPropagation();
+    toggleFavorite();
+});
+
+$(document).on("click", ".navi__cart-btn, .cart__close", function (e) {
+    e.stopPropagation();
+    toggleCart();
+});
