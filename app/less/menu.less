@@ -6,6 +6,10 @@
     background-color: @white;
     z-index: 900;
 
+    @media @sm {
+        display: none !important;
+    }
+
     &__item {
         background-color: @gray;
         cursor: pointer;
@@ -29,6 +33,10 @@
 
     &__item-content {
         padding-left: 2.5rem;
+
+        @media @md {
+            padding-left: 0;
+        }
     }
 
     &__icon {
@@ -36,6 +44,7 @@
         background-color: @black;
         width: 36px;
         height: 36px;
+        margin-right: 0.75rem;
         transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
         &--półbuty {
@@ -76,13 +85,8 @@
     }
 
     &__text {
-        padding-left: 0.75rem;
         color: @black;
         transition: color 0.3s ease-in-out;
-
-        &--last {
-            padding-left: 0;
-        }
     }
 
     &__submenu {
@@ -93,11 +97,28 @@
         padding: 2.5rem;
     }
 
+    &__submenu-column-wrapper {
+        height: 521px;
+    }
+
+    &__submenu-column {
+        height: fit-content !important;
+    }
+
     &__submenu-link {
         font-size: 0.875rem;
         line-height: 1.25rem;
         margin-bottom: 0.625rem;
+        width: 50%;
         transition: color 0.3s ease-in-out;
+
+        @media @lg {
+            width: 100%;
+        }
+
+        @media @md {
+            width: 50%;
+        }
 
         &:hover,
         &:focus,

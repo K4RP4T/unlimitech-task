@@ -1,16 +1,28 @@
 .promotions {
     &__title {
         margin-bottom: 3.5rem;
+
+        @media @sm {
+            margin-bottom: 0;
+        }
     }
 
     &__main-title {
         color: @blue;
         font-size: 2rem;
+
+        @media @sm {
+            font-size: 1.5rem;
+        }
     }
 
     &__text {
         color: @black;
         font-size: 2rem;
+
+        @media @sm {
+            font-size: 1.5rem;
+        }
     }
 
     &__link {
@@ -20,11 +32,20 @@
         &:hover {
             color: @blue;
         }
+
+        @media @sm {
+            margin-top: 0.75rem;
+            margin-bottom: 1.75rem;
+        }
     }
 
     &__container {
         position: relative;
         margin-bottom: 8rem;
+
+        @media @md {
+            margin-bottom: 3.125rem;
+        }
     }
 
     &__item,
@@ -50,6 +71,10 @@
         &:focus .promotions__cart,
         &:focus-within .promotions__cart {
             transform: translateY(-75%);
+
+            @media @md {
+                transform: translateY(0%) !important;
+            }
         }
     }
 
@@ -140,6 +165,10 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
 
+        @media @md {
+            opacity: 1 !important;
+        }
+
         &:hover,
         &:focus {
             background-color: @gray;
@@ -171,6 +200,11 @@
         background-color: @blue;
         opacity: 0;
         transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        @media @md {
+            bottom: 0.75rem !important;
+            opacity: 1 !important;
+        }
 
         &:hover,
         &:focus {

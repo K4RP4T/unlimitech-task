@@ -25,6 +25,7 @@ function toggleSearch() {
         $(".search__input").focus();
     } else {
         $("body > *:not(.search)").removeAttr("inert");
+        $inertElements.attr("inert", "");
         $(".navi__search-input").focus();
     }
 }

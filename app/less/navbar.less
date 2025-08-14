@@ -3,6 +3,11 @@
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
 
+    @media @sm {
+        margin-top: 1.5rem;
+        margin-bottom: 1.75rem;
+    }
+
     &__link {
         color: @black;
         padding: 0 0.75rem;
@@ -38,6 +43,10 @@
     &__btn {
         background-color: @gray;
 
+        @media @sm {
+            margin: 0.125rem !important;
+        }
+
         &:hover {
             background-color: darken(@gray, 15%);
         }
@@ -71,6 +80,49 @@
 
         &:focus {
             box-shadow: none;
+        }
+    }
+
+    @media @xl {
+        &__logo {
+            order: 1;
+        }
+
+        &__search-form {
+            order: 2;
+        }
+
+        &__buttons {
+            order: 3;
+        }
+
+        &__items {
+            order: 4;
+        }
+    }
+
+    @media @sm {
+        &__logo {
+            order: 1;
+            width: 131px;
+        }
+
+        &__buttons {
+            order: 2;
+        }
+
+        &__search-form {
+            order: 3;
+        }
+
+        &__items {
+            order: 4;
+        }
+    }
+
+    @media @xxs {
+        &__container {
+            justify-content: center !important;
         }
     }
 }
