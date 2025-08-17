@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    $(".search").load("html/search.html", function () {
+        [1, 2].forEach(function (i) {
+            $(".search__item--" + i).load("html/promotions_item_" + i + ".html");
+        });
+    });
+});
+
 $(document).on("submit", ".search__form", function (e) {
     e.preventDefault();
     const text = $(".search__input").val();
